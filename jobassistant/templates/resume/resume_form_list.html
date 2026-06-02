@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+
+    <div>
+        <ul>
+            {% for personal in object_list %}
+                <li>{{ personal.first_name }} {{ profile.last_name }} | <a
+                        href="{% url 'resume:personal-update' personal.pk %}">edit</a>
+{#                    <a href="{% url 'personal-delete' personal.pk %}">delete</a>#}
+                </li>
+            {% empty %}
+                <li>No resumes yet.</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}

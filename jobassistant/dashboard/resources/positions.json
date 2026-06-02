@@ -1,0 +1,955 @@
+{
+  "administration assistant": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "Working in adminstrative roles, I focus on maximizing productivity and maintaining efficient communication in the workplace.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have experience working with industry standard tools, such as {}.",
+        "custom_text_response_one_element": "I have experience working with industry standard tools, such as {}.",
+        "default_response": "I have experience working with industry standard tools, such as MS Word, and excel.",
+        "fillers": null,
+        "id": 2,
+        "question": "What administrative tools are you most familiar with?",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "From managing inventories and generating reports to coordinating projects and providing outstanding customer service, I excel at prioritizing tasks, collaborating with peers and management teams, and enforcing effective communication and organizational procedures.",
+        "fillers": null,
+        "id": 3,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last administration role, I was able to deliver in all areas. I had a wonderful relationship with staff and customers, and I was able to autonomously solve problems as they arose.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe your experience working in a similar prior hospitality role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "Upon review of your posting for an Administration Assistant, I was eager to submit my resume for your consideration. As a highly organized and efficient professional with strong administrative support experience and superior interpersonal talents, I am prepared to significantly contribute to your company's goals."
+      },
+      {
+        "text": "As an eager and consumate professional with extensive experience in office administration, I couldn't be more thrilled to apply for this position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to join your team and I have no doubt I would excel and deliver above expectation."
+      },
+      {
+        "text": "My skills in general administration and organization, along with my dynamic collaborative abilities and my positive attitude and work ethic, position me to excel in this role, and I am confident my additional strengths will readily translate to your environment. The chance to offer more insight into my qualifications would be most welcome."
+      }
+    ],
+    "parent_industry": "administration and office support",
+    "sub_industry": "Office Administration"
+  },
+  "area construction manager": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "Throughout my career as a consutruction manager, I have worked for numerous organisations and departments with great success.",
+        "fillers": null,
+        "id": 1,
+        "question": "Please describe highlights of your career working in similar roles at previous companies.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I possess a high attention to detail and I am very customer-focused, ensuring all their needs are met beyond expectation where ever possible.",
+        "fillers": null,
+        "id": 2,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "My knowledge of building regulations is extensive and up to date. They include {}. I go the extra mile to ensure regulations are being adhered to across the full scope of every project.",
+        "custom_text_response_one_element": "My knowledge of building regulations is extensive and up to date. I have a particularly strong knowledge of {}. I go the extra mile to ensure regulations are being adhered to across the full scope of every project.",
+        "default_response": "My knowledge of building regulations is extensive and up to date. I go the extra mile to ensure regulations are being adhered to across the full scope of every project.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please list the building regulations of which you are most familiar with.",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last contruction management  role, I was able to deliver in all areas. I had a great relationship with contractors, customers, and corporate stakeholders.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe your experience specifically working and communicating with customers and key stakeholders working in a similar prior contruction management role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have the ability to sovle complex, time-sensitive problems as they arise. I also possess a deep understanding of development time-cycles and project forecasting.",
+        "fillers": null,
+        "id": 5,
+        "question": "",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "As an experienced, motivated and solution focused area construction manager, I feel that my professional and educational background will satisfy the requirements of this position."
+      },
+      {
+        "text": "As an experienced, motivated and solution focused area construction manager, I feel that I have the skills and industry experience to be an invaluable asset to your team."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to join your team as an area construction manager and I have no doubt I would  deliver above expectation."
+      }
+    ],
+    "parent_industry": "construction",
+    "sub_industry": "Construction Project Management"
+  },
+  "business analyst": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As a prolific business analyst with an eye for detail, I enjoy taking the reins on business problems and have experience dealing with multiple stakeholders simultaneously to understand business problems and work autonomously to come up with Solutions.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have an innate ability to understand what the commercial outcomes of the business are and how to drive these through data analysis, taking into account all areas of the business.",
+        "fillers": null,
+        "id": 2,
+        "question": "Describe your achievements using data analysis to achieve key business outcomes in a commercial setting.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have successfully applied my skills to a wide range of use cases, including customer data analysis and segmentation,  online conversion optimisation, and deep analysis of marketing data.\n",
+        "fillers": null,
+        "id": 3,
+        "question": "Describe a use-case or two you have worked on, what the outcome was and the problems you faced.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have an extremely personable and approachable personality and am able to explain a wide array of technical concepts to non-technical audiences.",
+        "fillers": null,
+        "id": 4,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "Whilst I have had exposure to most mainstream data analysis tools, the majority of my work has been done using the following tools and languages: {}.",
+        "custom_text_response_one_element": "Whilst I have some exposure to most mainstream data analysis tools, the majority of my work has been done using {}.",
+        "default_response": "I am familiar with most mainstream tools such as spreedsheets, cloud solutions.",
+        "fillers": null,
+        "id": 5,
+        "question": "Please list the softwares, program languages or tools you are familiar with.",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am proactive in identifying and implementing improvements to processes and procedures. I am also used to autonomously investigating gathering and documenting requirements for system enhancements.",
+        "fillers": null,
+        "id": 6,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am able to work effectively with clients, vendors and third-parties to achieve business outcomes.",
+        "fillers": null,
+        "id": 7,
+        "question": "Describe your experience working with clients, vendors, or other third parties to meet business objectives make optimisations to key outcomes.",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "As an experienced business analyst having worked across an eclectic range of technology and software businesses, I am excited to submit my application."
+      },
+      {
+        "text": "As an eager and consummate professional business analyst with extensive experience performing data analysis in a variety of business environments, I couldn't be more thrilled to apply for this position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "Due to my experience and willingness to achieve excellence, I believe I would make an ideal business analyst for your company."
+      },
+      {
+        "text": "My skills as a business analyst, along with my dynamic collaborative abilities and my positive attitude and work ethic, position me to excel in this role. I am confident my strengths will readily translate to your environment. The chance to offer more insight into my qualifications would be most welcome."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Business Systems Analyst Services"
+  },
+  "call center agent": {
+    "body": [
+      {
+        "custom_text_response": "Throughout my prior experience in customer service, I have demonstrated numerous invaluable qualities that have attributed to my success, including {}.",
+        "custom_text_response_one_element": "Throughout my prior experience in customer service, {} have been a great contributor to my success.",
+        "default_response": "My background includes successfully enhancing customer response strategies, implementing new processes, and managing overall customer service functionality to maximize loyalty, productivity, and growth.",
+        "fillers": null,
+        "id": 1,
+        "question": "Please list the areas of customer service in which you have performed outstandingly? (example: my excellent and fast problem-solving skills, my abilities to develop a meaningful and personal rapport with customers)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "I have had experience using and optimizing a number of mainstream customer support solutions to maximize customer satisfaction, including {}.",
+        "custom_text_response_one_element": "I have had experience using and optimizing a number of mainstream customer support solutions to maximize customer satisfaction. The tool I have had the most experience using is {}.",
+        "default_response": "I have become adept in overseeing a wide variety of customer-facing responsibilities that maximize customer satisfaction, including CMS systems, and a variety ticketing support systems.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please list the customer support solutions have you had experience using? (example: Genesys, Twilio Flex, Hatchbuck, Aircall, Zendesk)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In addition to my experience using customer service software, I can also contribute to the optimization and implementation of such services to help all team members be successful",
+        "fillers": null,
+        "id": 3,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I believe at the core of great customer service is establishing great relationships with customers. At the same time, I also possess the resilience and determination to convert customers and drive growth.",
+        "fillers": null,
+        "id": 4,
+        "question": "",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "As a skilled communicator and problem-solver with significant experience ensuring outstanding customer service within high-volume call centres, I possess a wide range of knowledge and expertise that will allow me to contribute toward the success of your company."
+      },
+      {
+        "text": "As a personable, resilient, sales-oriented and skilled communicator, I believe I am the ideal applicant for call centre agent role. "
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to become part of your customer service team, and I have no doubt I would excel and deliver above expectation."
+      }
+    ],
+    "parent_industry": "call centre and customer service",
+    "sub_industry": "Customer Service"
+  },
+  "chef": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "With extensive experience working in high pressure kitchens, I possess a wide range of knowledge and experience that will allow me to contribute toward the success of your establishment",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "My expertise lies in successfully conceptualizing, developing, and implementing innovative menus to optimize guest satisfaction and retention while leading staff training initiatives and ensuring inventory and cost containment",
+        "fillers": null,
+        "id": 2,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have expertise in creating unique and wonderful menus such as {}.",
+        "custom_text_response_one_element": "I specialize in creating menus for {}.",
+        "default_response": "Additionally, my established ability to prepare successful menus for special events positions me to make a significant contribution to your restaurant.",
+        "fillers": null,
+        "id": 3,
+        "question": "List types of menus have you had experience creating?",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As a consummate chef, I am inspired cuisines from all continents and cultures. I am constantly on the look out for the latest cuisine trends, and I incorporate the best of them into my repertoire with flair and contemporary style.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe the inspiration behind your cooking?",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last restaurant, I was able to deliver in all areas. I had a wonderful relationship with local customers and other staff members, and I was able to autonomously solve problems as they arose.",
+        "fillers": null,
+        "id": 5,
+        "question": "Please describe your experience working as a chef in a similar prior role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "Food is my life passion! As a highly experienced and talented cook, it is my absolute privilege to apply as a chef at your restaurant."
+      },
+      {
+        "text": "Marvellous cuisine is my life passion! As a highly experienced and talented cook, it is my absolute privilege to apply as a chef at your restaurant."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to work at your restaurant and I have no doubt I would excel and deliver above expectation."
+      }
+    ],
+    "parent_industry": "hospitality and tourism",
+    "sub_industry": "Waiting Staff Services"
+  },
+  "cloud engineer": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As an experienced Cloud engineer and developer, I am ready to play a key role in managing, designing and implementing various technical aspects of your infrastructure and platform. I am also able to build tools for development, monitoring and operations and troubleshoot issues in our various environments.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "I am familiar with all mainstream devops tools and cloud solutions, and can provide assistance to make the most out of new technologies and processes. I have particularly extensive experience with {}.",
+        "default_response": "I am familiar with all mainstream devops tools and cloud solutions, and can provide assistance to make the most out of new technologies and processes.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please list the tools, cloud solutions, and programming languages that you specialize in? (example: AWS (list specific tools), Python, Jenkins, Chef)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have experience using and configuring modern development tools including git, continuous integration pipelines, and other productivity tools to maximize efficiency.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please describe your experience using mainstream productivity tools for development (such as git, docker, grunt.js, CI/CD pipelines ...) ",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages, including {}.",
+        "custom_text_response_one_element": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages, with my main one being {}.",
+        "default_response": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please list the scripting languages you are most familiar with (example python, bash)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have a demonstrated willingness to take initiative and possess great communication and solid technical skills, as well as the ability to work with people from diverse backgrounds and fields of expertise.",
+        "fillers": null,
+        "id": 5,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I enjoy participating in all phases of {}.",
+        "custom_text_response_one_element": "I enjoy participating in all phases of {}.",
+        "default_response": "I enjoy participating in all phases of system development, deployment, configuration, monitoring, performance, availability, alerting, data integrity, security and capacity planning.",
+        "fillers": null,
+        "id": 6,
+        "question": "please list the areas of DevOps / Cloud architecture you enjoy contributing to the most: example: system development, deployment, configuration, monitoring, performance, availability, alerting, data integrity, security and capacity planning",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am able effectively integrate, configure, deploy and manage centrally provided common cloud services (such as IAM, networking, logging, operating systems, and containers.) ",
+        "fillers": null,
+        "id": 7,
+        "question": "",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "I have extensive experience in Cloud engineering, DevOps, systems architecture design, and software design, thus I feel that my professional and educational background will more than satisfy the requirements of this position."
+      },
+      {
+        "text": "As an experienced DevOps and Cloud infrastructure engineer having worked both in startup environments and with major corporations, I believe I am the ideal choice to fill this cloud engineering position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to contribute to the development of your products, and I have no doubt I would excel and deliver above expectation as your next cloud engineer."
+      },
+      {
+        "text": "I am very much looking forward to contributing to the performance of both your products and business as your next cloud engineer."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Dev Ops"
+  },
+  "construction labourer": {
+    "body": [
+      {
+        "custom_text_response": "I have been working as a labourer and in other related areas for the following types of companies: {}.",
+        "custom_text_response_one_element": "I have worked as a labourer and in other related areas for predominantly {}.",
+        "default_response": "I have previously worked as a labourer in other related areas for a multitude of construction companies, architects, and land management organisations.",
+        "fillers": null,
+        "id": 1,
+        "question": "Please list the types of businesses you have worked in as a labourer, or in a similar role. EXAMPLE: land management organisations, architect firms.",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "I am physically fit, and maintain my fitness for the job through extra curricular activities such as: {}.",
+        "custom_text_response_one_element": "I am physically fit, and maintain my fitness for the job through extra curricular activities such as {}.",
+        "default_response": "I am physically fit, and maintain my fitness for the job through extra curricular activities, including running, cycling, and the gym.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please list ways in which you maintain your physical fitness required for the job. EXAMPLE: running, jogging, swimming, gym",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As an individual who flourishes in a team environment, I am always receptive of direction, criticism and feedback.",
+        "fillers": null,
+        "id": 3,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have had some great achievements working for the following companies: {}.",
+        "custom_text_response_one_element": "I have had some great achievements working for {}.",
+        "default_response": "I have had some great achievements working for construction companies in the past as you will see from my resume.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please list the companies you have worked for previous, of which you are most proud of.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "My strengths include solving complex problems on the job as they arise, and communicating effectively with managers and stakeholders.",
+        "fillers": null,
+        "id": 5,
+        "question": "Please describe what you believe are your strengths as a construction labourer",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "I am thrilled to bring my experience in commercial construction to your company as a construction labourer. I am a reliable, hardworking individual, and the ideal candidate for this position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I believe my attention detail, fitness, and skill set would make me a valuable asset to the team."
+      }
+    ],
+    "parent_industry": "trades and services",
+    "sub_industry": "Labourer Services"
+  },
+  "data scientist": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As a prolific data scientist, I enjoy taking the reins on business problems and have experience dealing with multiple stakeholders simultaneously to understand business problems and work autonomously to come up with Solutions.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have an innate ability to understand what the commercial outcomes of the business are and how to drive these through machine learning capabilities.",
+        "fillers": null,
+        "id": 2,
+        "question": "Describe your achievements using data science to achieve key business outcomes in a commercial setting.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have successfully applied my skills to a wide range of use cases, including customer data analysis and segmentation,  online conversion optimisation, and deep analysis of marketing data.\n",
+        "fillers": null,
+        "id": 3,
+        "question": "Describe a use-case or two you have worked on, what the outcome was and the problems you faced.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have an extremely personable and approachable personality and am able to explain complex machine learning concepts to non-technical audiences.",
+        "fillers": null,
+        "id": 4,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "Whilst I have had exposure to most mainstream data analysis tools, the majority of my work has been done using the following tools and languages: {}.",
+        "custom_text_response_one_element": "Whilst I have some exposure to most mainstream data analysis tools, the majority of my work has been done using {}.",
+        "default_response": "I am familiar with SQL, R, Python and cloud solutions.",
+        "fillers": null,
+        "id": 5,
+        "question": "Please list the program languages and tools you are familiar with",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have a demonstrated desire to learn database languages through either academic coursework, projects, and online courses.",
+        "fillers": null,
+        "id": 6,
+        "question": "Please describe the ways that you continue to do professional development and stay at the cutting edge of the industry as a data scientist",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "As an experienced data scientist having worked across an eclectic range of technology and software businesses, I am excited to submit my application."
+      },
+      {
+        "text": "As an eager and consummate professional data scientist with extensive experience performing data analysis in a variety of business environments, I couldn't be more thrilled to apply for this position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "Due to my experience and willingness to achieve excellence, I believe I would make an ideal data scientist for your company."
+      },
+      {
+        "text": "My skills in data science, along with my dynamic collaborative abilities and my positive attitude and work ethic, position me to excel in this role. I am confident my strengths will readily translate to your environment. The chance to offer more insight into my qualifications would be most welcome."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Dev Ops"
+  },
+  "devops engineer": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "As an experienced DevOps engineer and developer, I am ready to play a key role in managing, designing and implementing various technical aspects of your infrastructure and platform. I am also able to build tools for development, monitoring and operations and troubleshoot issues in our various environments.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "I am familiar with all mainstream devops tools and cloud solutions, and can provide assistance to make the most out of new technologies and processes. I have particularly extensive experience with {}.",
+        "default_response": "I am familiar with all mainstream devops tools and cloud solutions, and can provide assistance to make the most out of new technologies and processes.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please list the tools, cloud solutions, and programming languages that you specialize in? (example: AWS (list specific tools), Python, Jenkins, Chef)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have experience using and configuring modern development tools including git, continuous integration pipelines, and other productivity tools to maximize efficiency.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please describe your experience using mainstream productivity tools for development (such as git, docker, grunt.js, CI/CD pipelines ...) ",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages, including {}.",
+        "custom_text_response_one_element": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages, with my main one being {}.",
+        "default_response": "I have a strong understanding of operating systems, networking, and software engineering fundamentals, and am familiar with several scripting languages.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please list the scripting languages you are most familiar with (example python, bash)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have a demonstrated willingness to take initiative and possess great communication and solid technical skills, as well as the ability to work with people from diverse backgrounds and fields of expertise.",
+        "fillers": null,
+        "id": 5,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I enjoy participating in all phases of {}.",
+        "custom_text_response_one_element": "I enjoy participating in all phases of {}.",
+        "default_response": "I enjoy participating in all phases of system development, deployment, configuration, monitoring, performance, availability, alerting, data integrity, security and capacity planning.",
+        "fillers": null,
+        "id": 6,
+        "question": "please list the areas of DevOps you enjoy contributing to the most: example: system development, deployment, configuration, monitoring, performance, availability, alerting, data integrity, security and capacity planning",
+        "type": "list"
+      }
+    ],
+    "intro": [
+      {
+        "text": "I have extensive experience in DevOps, systems architecture design and software design, thus I feel that my professional and educational background will more than satisfy the requirements of this position."
+      },
+      {
+        "text": "As an experienced DevOps infrastructure engineer having worked both in startup environments and with major corporations, I believe I am the ideal choice to fill this DevOps position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to contribute to the development of your products, and I have no doubt I would excel and deliver above expectation as your next DevOps engineer."
+      },
+      {
+        "text": "I am very much looking forward to contributing to the performance of both your products and business as your next devops engineer."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Dev Ops"
+  },
+  "it project manager": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "My previous experience covers both transactional and logistical project management, with elements of software installation, configuration and post-installation support",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have experience in all areas of project management. {}",
+        "custom_text_response_one_element": "I have experience working with industry standard tools, such as {}.",
+        "default_response": "I am able to promptly and efficiently respond to incoming transactional requests from key customers and internal stakeholders, managing the initial request from enquiry through to quote and invoice.",
+        "fillers": null,
+        "id": 2,
+        "question": "Describe your experience in IT project management. Which area do you specialize in?",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "From the procurement and delivery of hardware through the coordination of internal resources and third parties/vendors, to detailed project planning and execution, I excel at prioritizing tasks, collaborating with peers and management teams, and enforcing effective communication and organizational procedures.",
+        "fillers": null,
+        "id": 3,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last IT project management role, I was able to deliver in all areas. I had a wonderful relationship with staff and customers, and I was able to autonomously solve problems as they arose.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe your experience working in a similar prior IT project manager role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am familiar with SQL, spreadsheets, and most mainstream project softwares.",
+        "fillers": null,
+        "id": 5,
+        "question": "Please list the project management tools, and any other relevant tools you are familiar with",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "",
+        "fillers": null,
+        "id": 6,
+        "question": "",
+        "type": ""
+      }
+    ],
+    "intro": [
+      {
+        "text": "As an experienced IT project manager across an eclectic range of technology and software businesses, I am excited to submit my application."
+      },
+      {
+        "text": "As an eager and consummate professional with extensive experience in IT project management, I couldn't be more thrilled to apply for this position."
+      }
+    ],
+    "outro": [
+      {
+        "text": "Due to my experience and willingness to achieve excellence, I believe I would make the ideal project manager for your company."
+      },
+      {
+        "text": "My skills in project management and organization, along with my dynamic collaborative abilities and my positive attitude and work ethic, position me to excel in this role. I am confident my strengths will readily translate to your environment. The chance to offer more insight into my qualifications would be most welcome."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Programme and Project Management"
+  },
+  "retail sales assistant": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I possess years of experience in various retail sales positions, driving store profitability and customer loyalty through exceptional merchandising and customer service strategies.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have had experience working at stores and chains including {}.",
+        "custom_text_response_one_element": "My last position was at {}, where I had great success with staff and customers.",
+        "default_response": "I have worked at numerous retail outlets, spanning multiple industries, from fashion to sports merchandise.",
+        "fillers": null,
+        "id": 2,
+        "question": "What retail stores and brands have you worked at previously?",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "My expertise lies in identifying customer goals and needs, recommending products, organizing inventories and stock levels, and managing register operations in customer-centric retail environments.",
+        "fillers": null,
+        "id": 3,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last retail position, I was able to deliver in all areas. I had a wonderful relationship with local customers and other staff members, and I was able to autonomously solve problems as they arose.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe your experience working in a similar prior retail  role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "If you are looking for an experienced, customer-oriented, and highly personable professional to join your team as your next Retail Sales Assistant, I urge you to review and consider my enclosed resume. "
+      },
+      {
+        "text": "Thanks to my attention to detail, and affable personality, I am perfectly suited to be your next retail sales assistant. "
+      }
+    ],
+    "outro": [
+      {
+        "text": "It would be a delight to have the opportunity to join your team and I have no doubt I would excel and deliver above expectation."
+      },
+      {
+        "text": "I look forward to having the opportunity to discuss becoming your new retail sales assistant."
+      }
+    ],
+    "parent_industry": "retail and consumer products",
+    "sub_industry": "Retail Assistant Services"
+  },
+  "software developer": {
+    "body": [
+      {
+        "custom_text_response": "In my career as a developer, I have specialised in the following well-adopted and mainstream programming languages: {}.",
+        "custom_text_response_one_element": "In my career as a developer, I have specialised in {}, due to its large development community and versatility in application.",
+        "default_response": "Throughout my career as a developer, I have specialised in the most well-adopted and mainstream programming languages, such as python, JavaScript, php, java, and C++.",
+        "fillers": null,
+        "id": 1,
+        "question": "Please list the programming languages that you specialize in? (example: Python, JavaScript, Java)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "I am an advocate for using and contributing to well-adopted and open-source frameworks, such as {}.",
+        "custom_text_response_one_element": "I am an advocate for using and contributing to well-adopted and open-source frameworks, such as {}.",
+        "default_response": "I am an advocate for using and contributing to well-adopted and open-source frameworks.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please list the development frameworks that you specialize in? (example: Django, Ruby on rails, Spring)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have experience using modern development tools including git, continuous integration pipelines, and other productivity tools to maximize efficiency.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please describe your experience using mainstream productivity tools for development (such as git, docker, grunt.js ...) ",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "My previous employment spans an array of different environments, including {}. Thus, I am highly versatile, and able to adapt to different working environments.",
+        "custom_text_response_one_element": "My previous employment has largely been in the world of {}.",
+        "default_response": "I have had the privilege of working for an eclectic array of IT businesses, including start-ups, corporations, and SASS enterprise companies.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please list the categories of businesses you have previously worked for as a software developer. (for example: Start ups, small business, corporate, SASS Enterprise)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "Throughout my career as a developer, I have had experience in many aspects of development including feature development, monitoring production environments, and writing tests.",
+        "fillers": null,
+        "id": 5,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am highly proficient with working in Unix and Linux environments, writing automation scripts and performing tasks that increase performance and team efficiency. I thoroughly enjoy working with a fast-paced and highly skilled team who value constant improvement and up-skilling.",
+        "fillers": null,
+        "id": 6,
+        "question": "",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "I have extensive experience in both in programming and software design, and I feel that my professional and educational background will satisfy the requirements of this position."
+      },
+      {
+        "text": "With extensive experience in both front-end and backend development, I feel that I have the skills and experience as a programmer to be an invaluable asset to your team."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to contribute to the development of your products, and I have no doubt I would excel and deliver above expectation."
+      }
+    ],
+    "parent_industry": "information and communication technology",
+    "sub_industry": "Software Engineering"
+  },
+  "structural engineer": {
+    "body": [
+      {
+        "custom_text_response": "As a skilled structural engineer, I have had experience working with {}.",
+        "custom_text_response_one_element": "As a skilled structural engineer, I have had experience working with {}.",
+        "default_response": "As a skilled structural engineer, I have had experience working with leading residential builders, industrial and commercial development companies, government and urban land authorities, developers, and architects.",
+        "fillers": null,
+        "id": 1,
+        "question": "List the types of industry entities you have experience working with. For example: leading residential builders, industrial and commercial development companies.",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my resume you will find that I am equipped to prepare Structural/Civil calculations and drawings, and liaise these professionally with clients, drafters, builders and architects.",
+        "fillers": null,
+        "id": 2,
+        "question": "Please describe or detail your experience writing structural engineering documentation.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I am able to provide thorough and efficient site inspections for residential footings and structural members.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please describe or detail your experience providing thorough and efficient site inspections for residential footings and structural members.",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have a detailed knowledge of {}. I am also well versed on the relevant country-specific standards and technical notes.",
+        "custom_text_response_one_element": "I have a detailed knowledge of {}. I am also well versed on the relevant country-specific standards and technical notes.",
+        "default_response": "I have a detailed knowledge of SLOG, ClearCalcs, RAPT, Spacegass and/or Structural Toolkit, and I am up to date with the relevant country-specific standards and technical notes.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please list the frameworks, and standards with which you are familiar. EXAMPLE: SLOG, ClearCalcs, RAPT",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have excellent time management skills and the ability to learn quickly and accurately.",
+        "fillers": null,
+        "id": 5,
+        "question": "",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "Having previously worked for large-sized engineering consultancies, I believe I am the ideal candidate for this position."
+      },
+      {
+        "text": "Given my expertise in land development industries, I believe I am an ideal candidate for this role."
+      }
+    ],
+    "outro": [
+      {
+        "text": "Having previously worked for large-sized engineering consultancies, I believe I am the ideal candidate for this position."
+      },
+      {
+        "text": "Given my expertise in land development industries, I believe I am an ideal candidate for this role."
+      }
+    ],
+    "parent_industry": "engineering",
+    "sub_industry": "Civil and Structural Engineering"
+  },
+  "waiter": {
+    "body": [
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "From taking customer orders and refilling glasses to setting tables and ensuring timely food and drink delivery, I am experienced and efficient in all aspects of this role.",
+        "fillers": null,
+        "id": 1,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "I have provided excellent customer service in consecutive serving positions for both casual and fine dining establishments, and my previous employers routinely praised me for abilities to deliver excellent customer service.",
+        "fillers": null,
+        "id": 2,
+        "question": "",
+        "type": "text"
+      },
+      {
+        "custom_text_response": "I have expertise in {}.",
+        "custom_text_response_one_element": "I have expertise in the following areas: {}.",
+        "default_response": "I have expertise in preparing cocktails, coffee, and wine service.",
+        "fillers": null,
+        "id": 3,
+        "question": "Please list the areas in food preparation and customer service that you have had experience in. (example: cocktail preparation and serving, coffee making, wine service)",
+        "type": "list"
+      },
+      {
+        "custom_text_response": "",
+        "custom_text_response_one_element": "",
+        "default_response": "In my last hospitality role, I was able to deliver in all areas. I had a wonderful relationship with local customers and other staff members, and I was able to autonomously solve problems as they arose.",
+        "fillers": null,
+        "id": 4,
+        "question": "Please describe your experience working in a similar prior hospitality role. How were you able to deliver for customers and provide value to the business?",
+        "type": "text"
+      }
+    ],
+    "intro": [
+      {
+        "text": "As an enthusiastic professional with extensive experience in hospitality and customer service, I am prepared to make an immediate and positive impact on your restaurant."
+      },
+      {
+        "text": "Having performed outstandingly in a number of hospitality and customer service roles, I feel that I have the skills and experience to be an invaluable asset to your team."
+      }
+    ],
+    "outro": [
+      {
+        "text": "I would be thrilled to have the opportunity to join your team and I have no doubt I would excel and deliver above expectation."
+      }
+    ],
+    "parent_industry": "hospitality and tourism",
+    "sub_industry": "Waiting Staff Services"
+  }
+}

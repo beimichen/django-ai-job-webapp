@@ -1,0 +1,330 @@
+    {% extends "dashboard/dashboard_menu.html" %}
+    {% load static i18n compress%}
+    {% load crispy_forms_tags %}
+    {% block title %}
+        {{ user.username }}
+    {% endblock %}
+    {% block headcontent %}
+    {% endblock %}
+    {% block content %}
+        <style>
+        @media(max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+        /* Force table to not be like tables anymore */
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border: 1px solid #ccc;
+        }
+
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        /*
+        Label the data
+        */
+    {#	td:nth-of-type(1):before { content: "Language" }#}
+    {#	td:nth-of-type(2):before { content: "Proficiency"; }#}
+    {#	td:nth-of-type(3):before { padding-bottom: 20px; }#}
+    {#	td:nth-of-type(4):before { content: "Favorite Color"; }#}
+    {#	td:nth-of-type(5):before { content: "Wars of Trek?"; }#}
+    {#	td:nth-of-type(6):before { content: "Secret Alias"; }#}
+    {#	td:nth-of-type(7):before { content: "Date of Birth"; }#}
+    {#	td:nth-of-type(8):before { content: "Dream Vacation City"; }#}
+    {#	td:nth-of-type(9):before { content: "GPA"; }#}
+    {#	td:nth-of-type(10):before { content: "Arbitrary Data"; }#}
+    }
+        .selectize-control {
+            border: 0px !important;
+            padding: 0px !important;
+        }
+        .add-row {
+            display: block;
+            padding-left:10px;
+            padding-top: 20px;
+        }
+        .select2-selection {
+            height: 42px !important;
+        }
+        .select2-selection__arrow {
+            height: 42px !important;
+        }
+        .select2-container {
+            width: 100% !important;
+        }
+        .form-check{
+            display: none;
+        }
+        .table thead th, .table thead td {
+            font-size:0.8em;
+        }
+        .delete-row {
+            font-size:12px;
+        }
+        .add-row {
+            font-size:14px;
+        }
+        input, button, select, optgroup, textarea {
+            font-size:12px;
+        }
+        @media(max-width:400px){
+            .select2-container {
+                min-width: 10em !important;
+            }
+            .textarea.form-control{
+                height:100px !important;
+            }
+            .stepper.stepper-horizontal {
+                display:none;
+            }
+        }
+        @media (min-width: 1025px) {
+            .textarea.form-control{
+                height:200px !important;
+            }
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: content;
+                -ms-flex-pack: content;
+                justify-content: content;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 0 0.75rem;
+            }
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-link {
+                padding: 0 0.2rem 0 0;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #b2afc6;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            .k-header__title .k-header__title-breadcrumbs {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                list-style-type: none;
+                margin: 0;
+            }
+            .k-header__title .k-header__title-title {
+                padding: 0 1.25rem 0 0;
+            }
+            .k-header__title {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin: 0 2.2rem;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home > i {
+                font-size: 1.15rem;
+                color: #b2afc6;
+            }
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home {
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator:after {
+              display: block;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              content: " ";
+              background: #b2afc6;
+            }
+        }
+        </style>
+        {% compress css %}
+            <link href="{% static 'css/stepper.min.css' %}" type="text/css" media="all"
+                  rel="stylesheet">
+        {% endcompress %}
+        {% compress css %}
+            {{ form.media.css }}
+        {% endcompress %}
+        {% compress js %}
+            {{ form.media.js }}
+        {% endcompress %}
+        <div class="k-content k-grid__item k-grid__item--fluid k-grid k-grid--hor">
+            <div id="k_header" class="k-header k-grid__item " data-kheader-minimize="on">
+                <!-- begin:: Content Head -->
+                <div class="k-header__title">
+                    <h3 class="k-header__title-title">JobAssistant</h3>
+                    <div class="k-header__title-breadcrumbs">
+                        <a href="#" class="k-header__title-breadcrumb-home"><i class="flaticon-home-2"></i></a>
+                        <span class="k-header__title-breadcrumb-separator"></span>
+                        <a href="" class="k-header__title-breadcrumb-link">Resume</a>
+                        <span class="k-header__title-breadcrumb-separator"></span>
+                        <a href="" class="k-header__title-breadcrumb-link">Personal</a>
+                    </div>
+                </div>
+            </div>
+        <!-- Horizontal Steppers -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Steppers Wrapper -->
+            <ul class="stepper stepper-horizontal">
+                {% if personal %}
+                  <li class="active">
+                    <a href="{% url 'resume:personal-update' personal_id %}">
+                      <span class="circle">✔</span>
+                      <span class="label">Personal</span>
+                    </a>
+                  </li>
+              {% else %}
+              <li class="active">
+                <a href="{% url 'resume:create-personal' %}">
+                  <span class="circle">?</span>
+                  <span class="label">Personal</span>
+                </a>
+              </li>
+            {% endif %}
+                {% if experience %}
+                  <li>
+                    <a href="{% url 'resume:experiences' %}">
+                      <span class="circle">✔</span>
+                      <span class="label">Experience</span>
+                    </a>
+                  </li>
+              {% else %}
+               <li>
+                <a href="{% url 'resume:experiences' %}">
+                  <span class="circle">?</span>
+                  <span class="label">Experience</span>
+                </a>
+              </li>
+            {% endif %}
+              {% if education %}
+                  <li>
+                    <a href="{% url 'resume:educations' %}">
+                      <span class="circle">✔</span>
+                      <span class="label">Education</span>
+                    </a>
+                  </li>
+              {% else %}
+              <li>
+                <a href="{% url 'resume:educations' %}">
+                  <span class="circle">?</span>
+                  <span class="label">Education</span>
+                </a>
+              </li>
+            {% endif %}
+              {% if reference %}
+                <li>
+                <a href="{% url 'resume:references' %}">
+                  <span class="circle">✔</span>
+                  <span class="label">References</span>
+                </a>
+              </li>
+              {% else %}
+              <li>
+                <a href="{% url 'resume:references' %}">
+                  <span class="circle">?</span>
+                  <span class="label">References</span>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+            <!-- /.Steppers Wrapper -->
+            <form class="form-horizontal m-5" method="post" action="">
+                {% csrf_token %}
+                <div class="card pb-3 mb-5" data-formset-form>
+                {{ form | crispy }}
+                {{ form.field.errors }}
+    {#            {% for formset in inlines %}#}
+    {#                {{ formset | crispy }}#}
+    {#            {% endfor %}#}
+                <table class="table pb-3 mb-5">
+                    {{ languages.management_form }}
+                    {% for form in languages.forms %}
+                        {% if forloop.first %}
+                            <thead>
+                            <tr>
+                                {% for field in form.visible_fields %}
+                                    <th>{{ field.label|capfirst }}</th>
+                                {% endfor %}
+                            </tr>
+                            </thead>
+                        {% endif %}
+                        <tr class="{% cycle "row1" "row2" %} formset_row">
+                            {% for field in form.visible_fields %}
+                                <td>
+                                    {% if forloop.first %}
+                                        {% for hidden in form.hidden_fields %}
+                                            {{ hidden }}
+                                        {% endfor %}
+                                    {% endif %}
+                                    {{ field.errors.as_ul}}
+                                    {{ field }}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+                    <div class="control-group">
+                      <div class="controls">
+    {#                      <div class="col text-center">#}
+    {#                          <button type="submit" class="btn btn-info fillHeight flex-btn-margin right-btn" id="submit-resume">Save and Continue</button>#}
+    {#                      </div>#}
+                          <div class="col text-center">
+                              <button type="submit" class="hero-btn-sm fillHeight flex-btn-margin right-btn" id="submit-resume">Save and Continue</button>
+                          </div>
+        {#                  <input type="submit" class="btn btn-primary" value="Submit">#}
+        {#                    <a href="{% url 'resume:list-personal' %}"></a>#}
+        {#                  </input>#}
+                      </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+        {% block footer %}
+        {% block extra_js %}
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+            <script type="text/javascript">
+                $('.formset_row').formset({
+                    addText: 'add language',
+                    deleteText: 'remove',
+                    prefix: 'language_set'
+                });
+            </script>
+        {% endblock extra_js %}
+        {% endblock %}
+    {% endblock %}
+
+

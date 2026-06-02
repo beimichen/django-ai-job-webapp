@@ -1,0 +1,20 @@
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="wrap">
+        <button type="button" class="hero-btn-sm">Start Chat</button> <!-- class="btn btn-info fillHeight flex-btn-margin right-btn shake"-->
+    </div>
+    <script>
+        function uuidv4() {
+          return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+          });
+        }
+        var senderUUID = uuidv4();
+        console.log(senderUUID);
+        document.querySelector('.start-chat-btn').onclick = function(e) {
+            window.location.pathname = '/chat/' + senderUUID + '/';
+        };
+    </script>
+{% endblock content %}

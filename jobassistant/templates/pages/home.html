@@ -1,0 +1,457 @@
+{% extends "base2.html" %}
+{% load static i18n compress%}
+{#{% load bootstrap4 %}#}
+{#{% bootstrap_css %}#}
+{#{% bootstrap_javascript jquery='full' %}#}
+{#{% bootstrap_messages %}#}
+{% block content %}
+{#    <div>#}
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- header area start -->
+        <style>
+        @media (min-width:500px){
+            .iphonex-cover {
+              --w: 220px;
+              position: relative;
+              width: var(--w);
+              padding: calc(var(--w) / 23) calc(var(--w) / 22);
+              z-index:-2;
+            }
+            .iphonex-cover img,
+            .iphonex-cover video,
+            .iphonex-cover ifame{
+              width: 100%;
+              border-radius: calc(var(--w) / 10);
+            }
+            .iphonex-cover:after {
+              content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='rgb(0,0,0)' viewBox='0 0 353 730'><path d='M353 54c0-35-20-54-54-54H54C20 0 0 20 0 54v622c0 34 22 54 54 54h245c34 0 54-21 54-54zm-15 620c0 25-15 40-40 40H56c-25 0-40-15-40-40V55c0-24 14-40 40-40h26c6 0 9 0 9 8 1 8 6 13 14 15a27 27 0 0 0 8 1h131a27 27 0 0 0 8-1c8-3 13-7 14-15 0-8 3-8 9-8h23c26 0 40 13 40 40z'/></svg>");
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+            .iphone-img {
+                z-index: -2;
+            }
+        }
+        @media (max-width:500px) {
+            .iphone-img {
+                display: none;
+            }
+        }
+        </style>
+		<!-- hero area start -->
+		<div class="hero-area slider-1" id="slider-area">
+			<div class="slider">
+				<div class="container">
+					<div class="row">
+                        <div class="iphonex-cover" style="position:absolute; top:28%">
+                          <img class="iphone-img" src="{% static 'img/screenshot/phone1.jpg' %}">
+                        </div>
+						<div class="col-md-offset-4 col-sm-offset-4 col-md-8">
+							<div class="hero-text mr-ri-l">
+                                <h1 style="display:inline-block">JOBASSISTANT</h1><p style="font-size:8px;display:inline-block">BETA</p>
+                                <p>Meet the AI chatbot that writes your job applications. Writing a cover letter, tailoring a resume and applying for a job has never been easier!</p>
+								<a href="#" class="start-chat-btn hero-btn" id="start-chat-btn2">Start Chat</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- hero area end -->
+		<!-- service area start -->
+		<section class="service-area gray-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="single-service">
+							<div class="service-icon">
+								<i class="fas fa-comments fa-4x"></i>
+							</div>
+							<div class="service-content">
+								<h2>Chat</h2>
+								<p>Chat with JobAssistant to generate a tailored resume and coverletter in under a minute!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-service">
+							<div class="service-icon">
+								<i class="fas fa-brain fa-4x"></i>
+							</div>
+							<div class="service-content">
+								<h2>AI powered</h2>
+								<p>JobAssistant uses cutting edge algorithms and machine learning to create your job applications</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 hidden-sm">
+						<div class="single-service">
+							<div class="service-icon">
+								<i class="fas fa-file-pdf fa-4x"></i>
+							</div>
+							<div class="service-content">
+								<h2>Automated</h2>
+								<p>Put your feet up and relax while JobAssistant generates and stylizes all your job application PDFs for you!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- service area start -->
+		<!-- About area start -->
+		<section id="about" class="about-area pt-130">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="about-content">
+							<h2>About JobAssistant</h2>
+							<p>JobAssistant is your friendly Artificial Intelligence-powered assistant, ready to help you generate professional, personalised resumes and cover letters so you don't have to stress out about job applications.</p>
+							<p>Interacting with JobAssistant is as simple as a having short chat. JobAssistant will do all the tedious work of analyzing what's best to include in your cover letter and resume with the support of industry wide insights and big data analysis.</p>
+                            <p>As JobAssistant is powered by Machine Learning, the more you chat with JobAssistant, the smarter and more effective it becomes. Ultimately, JobAssistant improves your chances of being hired.</p>
+{#							<a class="hero-btn" href="#">About</a>#}
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="iphonex-cover" style="left:30%; margin-bottom:36%;">
+                          <img class="iphone-img" src="{% static 'img/screenshot/phone2.jpg' %}">
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About area End -->
+		<!-- Feature area start -->
+		<section id="features" class="feature-area gray-bg pt-128 pb-70" style="z-index:999;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="section-heading pb-55 text-center">
+							<h2>Features</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-brainstorming"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Artificial Intelligence</h5>
+								<p>From dynamic cover letter writing, to intelligent personalisation, JobAssistant's AI gives you a truely unfair advantage.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-chat"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Chat</h5>
+								<p>Chat with JobAssistant to create full, personalised job applications in seconds.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 hidden-sm">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-thumbs-up"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Quick Applications</h5>
+								<p>Apply for hundreds of jobs a day. Sit back and relax while JobAssistant writes and generates the PDFs for you!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-ui-video-chat"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Personalize</h5>
+								<p>Personalize your application via JobAssistant's in-chat experience, or visit your dashboard to make changes of your own!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-learn"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Machine Learning</h5>
+								<p>Let JobAssistant's AI do the work for you, as it learns from every application created across every industry.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 hidden-sm">
+						<div class="awesome-feature text-center">
+							<div class="awesome-feature-icon">
+								<span><i class="icofont icofont-data"></i></span>
+							</div>
+							<div class="awesome-feature-details">
+								<h5>Insights</h5>
+								<p>Track your application progress via your dashboard and learn industry insights to give you the edge you need!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Feature feature area end -->
+		<!-- How it work start -->
+		<section class="how-work-area pt-130 pb-125 bg-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="iphonex-cover">
+                          <img class="iphone-img" src="{% static 'img/screenshot/phone3.jpg' %}">
+                        </div>
+					</div>
+					<div class="col-md-6">
+						<div class="how-work-left mt-90">
+							<h2>How It Works</h2>
+							<div class="how-work-tab mt-55">
+								<ul>
+									<li class="active"><a data-toggle="tab" href="#home">1. Chat</a></li>
+									<li><a data-toggle="tab" href="#menu1">2. Generate</a></li>
+									<li><a data-toggle="tab" href="#menu2">3. Download</a></li>
+								</ul>
+								<div class="tab-content">
+									<div id="home" class="mt-45 tab-pane fade in active">
+										<p>JobAssistant will ask you necessary the questions to generate a personalized cover letter. JobAssistant's industry insights will give you the edge.</p>
+									</div>
+									<div id="menu1" class="mt-45 tab-pane fade">
+										<p>After the chat, JobAssistant will generate a PDF of the cover letter and resume for you. Just sit back and enjoy!</p>
+									</div>
+									<div id="menu2" class="mt-45 tab-pane fade">
+										<p>Your cover letters will be downloadable in your dashboard. Access them any time! You can also edit them and re-generate the PDFs. How convenient!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- How it work End -->
+        <!-- fun fact area start -->
+		<!-- Subcribe Area End -->
+		<!-- Contact Area Start -->
+        <section class="subcribe-area pt-130 pb-115" style="background:#faf9ff; z-index:999;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="section-heading pb-35 text-center">
+							<h2>Chat For Free in Beta!</h2>
+							<p>JobAssistant will help you land your dream job! And during Beta you can chat for free anytime! So what are you waiting for!</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="subcribe-form text-center">
+				            <button class="start-chat-btn" id="start-chat-btn3">Start Chat</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    {% block contact %}
+            {% include "contact/contact.html" %}
+    {% endblock contact %}
+{#		<div id="contact" class="contact-area pt-130">#}
+{#			<div class="container">#}
+{#				<div class="row">#}
+{#					<div class="col-md-12">#}
+{#						<!-- Contact Form -->#}
+{#						<div class="contact-form" style="width:100%">#}
+{#							<form class="form" name="enq" method="post" action="mail.php">#}
+{#								<div class="row">#}
+{#									<div class="form-group col-md-12">#}
+{#										<input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required="required">#}
+{#									</div>#}
+{#									<div class="form-group col-md-12">#}
+{#										<input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">#}
+{#									</div>#}
+{#									<div class="form-group description col-md-12 mbnone">#}
+{#										<textarea rows="3" name="message" class="form-control" id="description" placeholder="Message" required="required"></textarea>#}
+{#									</div>#}
+{#									<div class="col-md-12">#}
+{#										<div class="actions text-center">#}
+{#											<input type="submit" value="SUBMIT" name="submit" class="btn btn-lg btn-contact-bg" title="Submit Your Message!">#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#							</form>#}
+{#						</div>#}
+{#						<!-- Contact Form -->#}
+{#						<!-- Google Map -->#}
+{#<!--#}
+{#						<div class="google-map">#}
+{#							<div id="map"></div>#}
+{#						</div>#}
+{#-->#}
+{#						<!-- Google Map -->#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+		<!-- Contact Area End -->
+		<!-- Copyright Area Start -->
+		<div class="copyright-area bg-5 ptb-70" style="background:#98219F">
+			<div class="container">
+				<!-- Contact address left -->
+				<div class="row">
+<!--					<div class="conct-border">-->
+<!--
+						<div class="col-md-4 col-sm-4">
+							<div class="single-address">
+								<div class="media">
+									<div class="media-left">
+										<i class="icofont icofont-phone"></i>
+									</div>
+									<div class="media-body text-center">
+										<p>+012 345 678 102 <br> +012 345 678 102</p>
+									</div>
+								</div>
+							</div>
+						</div>
+-->
+<!--						<div class="col-md-4 col-sm-4">-->
+<!--
+							<div class="single-address">
+								<div class="media">
+									<div class="media-left">
+										<i class="icofont icofont-web"></i>
+									</div>
+									<div class="media-body text-center">
+										<p>urname@email.com <br> urwebsitenaem.com</p>
+									</div>
+								</div>
+							</div>
+-->
+<!--						</div>-->
+<!--
+						<div class="col-md-4 col-sm-4">
+							<div class="single-address">
+								<div class="media">
+									<div class="media-left">
+										<i class="icofont icofont-social-google-map"></i>
+									</div>
+									<div class="media-body text-center">
+										<p>ur address goes here, <br> street,Crossroad123.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+-->
+<!--					</div>-->
+				</div>
+				<!-- Contact address left -->
+				<!-- Copyright right -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyright-area text-center" >
+							<!-- Copyright social -->
+							<div class="contact-social text-center pt-70 pb-35">
+								<ul>
+									<li>
+										<a href="#"><i class="icofont icofont-social-facebook" style="line-height:2;"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="icofont icofont-social-twitter" style="line-height:2;"></i></a>
+									</li>
+<!--
+									<li>
+										<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="icofont icofont-social-vimeo"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+									</li>
+-->
+								</ul>
+							</div>
+							<!-- Copyright social -->
+							<div class="copyright-text">
+								<p>&copy; 2019 <a href="#"> JobAssistant. </a> All Rights Reserved.</p>
+							</div>
+							<!-- Copyright text -->
+						</div>
+					</div>
+				</div>
+				<!-- Copyright right -->
+			</div>
+		</div>
+		<!-- Copyright Area End -->
+
+		<!-- all js here -->
+    <script>
+        function uuidv4() {
+              return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+              });
+            }
+            var senderUUID = uuidv4();
+            console.log(senderUUID);
+            console.log(senderUUID);
+            document.querySelector('#start-chat-btn1').onclick = function(e) {
+                window.location.pathname = '/chat/' + senderUUID + '/';
+            };
+            document.querySelector('#start-chat-btn2').onclick = function(e) {
+                window.location.pathname = '/chat/' + senderUUID + '/';
+            };
+            document.querySelector('#start-chat-btn3').onclick = function(e) {
+                window.location.pathname = '/chat/' + senderUUID + '/';
+            };
+    </script>
+    {% compress js %}
+        <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
+
+		<!-- map js -->
+{#		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>#}
+<!--
+		<script>
+			/*START CONTACT MAP JS*/
+			function initialize() {
+			  var mapOptions = {
+				zoom: 12,
+				scrollwheel: false,
+				center: new google.maps.LatLng(43.538263, -80.305922)
+			  };
+			  var map = new google.maps.Map(document.getElementById('map'),
+				  mapOptions);
+			  var marker = new google.maps.Marker({
+				position: map.getCenter(),
+				icon: 'img/icon/map-icon.png',
+				map: map
+			  });
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		   /*END CONTACT MAP JS*/
+		</script>
+-->
+{#    </div>#}
+{% endblock content %}

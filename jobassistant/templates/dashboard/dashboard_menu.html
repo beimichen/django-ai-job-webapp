@@ -1,0 +1,300 @@
+{% load static i18n compress%}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load bootstrap4 %}
+{% bootstrap_messages %}
+
+<!DOCTYPE html>
+
+<html lang="en" class="k-sweetalert2--nopadding">
+
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>JobAssistant | Dashboard</title>
+		<meta name="description" content="jobassistant dashboard menu">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+			WebFont.load({
+                google: {"families":["Poppins:300,400,500,600,700"]},
+                active: function() {
+                    sessionStorage.fonts = true;
+                }
+            });
+			function alertResume(){
+                setTimeout(function(){
+                    Swal.fire({
+                      title: 'Let us help you get hired!',
+                      text: "Please complete your resume. By completing your resume, we can improve your cover letters further and help you get hired.",
+                      type: 'warning',
+                      showCancelButton: true,
+                      confirmButtonColor: '#3085d6',
+                      cancelButtonColor: '#d33',
+                      confirmButtonText: 'Okay',
+                    });
+{#                    $('.swal2-confirm').on('click', function(){#}
+{#                        window.location.replace(window.location.origin + '/resume/personal/');#}
+{#                    })#}
+                },2200)
+            }
+        </script>
+        {% block css %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css" rel="stylesheet" type="text/css">
+        {% compress css %}
+        <link href="{% static 'css/project.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/line_awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/flaticon/flaticon.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/dash_header_navy.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/dash_menu_navy.min.css' %}" rel="stylesheet" type="text/css">
+        {% endcompress %}
+        {% compress css %}
+            <link href="{% static 'css/button.css' %}" rel="stylesheet" type="text/css">
+        {% endcompress %}
+        {% compress css %}
+            <link href="{% static 'css/stepper.min.css' %}" type="text/css" media="all" rel="stylesheet">
+        {% endcompress %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        {% endblock %}
+
+        <style>
+            #invite_friends a div:hover{
+                background-color: #5d78ff !important;
+            }
+            .form-control{
+                height: calc(2.8rem + 2px)!important;
+            }
+            .kt-badge.kt-badge--brand {
+                color: #FA5765 !important;
+            }
+        </style>
+	</head>
+
+	<!-- end::Head -->
+
+	<!-- begin::Body -->
+    <body class="k-page--loading-enabled k-page--loading k-sweetalert2--nopadding k-header--static k-header-mobile--fixed k-aside--enabled k-aside--fixed">
+
+        <!-- begin::Page loader -->
+
+		<!-- end::Page Loader -->
+
+		<!-- begin:: Page -->
+
+		<!-- begin:: Header Mobile -->
+		<div id="k_header_mobile" class="k-header-mobile  k-header-mobile--fixed ">
+			<div class="k-header-mobile__logo">
+				<a href="#">
+					<img alt="Logo" src="{% static 'images/jobassistant-logo.png' %}" style="max-width:120px;">
+				</a>
+			</div>
+			<div class="k-header-mobile__toolbar">
+				<button class="k-header-mobile__toolbar-toggler k-header-mobile__toolbar-toggler--left" id="k_aside_mobile_toggler"><span></span></button>
+				<button class="k-header-mobile__toolbar-topbar-toggler" id="k_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
+			</div>
+		</div>
+
+		<!-- end:: Header Mobile -->
+		<div class="k-grid k-grid--hor k-grid--root">
+			<div class="k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page">
+
+				<!-- begin:: Aside -->
+				<button class="k-aside-close" id="k_aside_close_btn"><i class="fas fa-times"></i></button>
+				<div class="k-aside  k-aside--fixed 	k-grid__item k-grid k-grid--desktop k-grid--hor-desktop" id="k_aside">
+
+					<!-- begin:: Aside -->
+					<div class="k-aside__brand   k-grid__item" id="k_aside_brand">
+						<div class="k-aside__brand-logo">
+							<a href="#">
+								<img alt="Logo" src="{% static 'images/jobassistant-logo.png' %}" style="max-width:120px;">
+							</a>
+						</div>
+						<div class="k-aside__brand-tools">
+							<button class="k-aside__brand-aside-toggler k-aside__brand-aside-toggler--left" id="k_aside_toggler"><span></span></button>
+						</div>
+					</div>
+
+					<!-- end:: Aside -->
+
+					<!-- begin:: Aside Menu -->
+					<div class="k-aside-menu-wrapper	k-grid__item k-grid__item--fluid" id="k_aside_menu_wrapper">
+						<div id="k_aside_menu" class="k-aside-menu " data-kmenu-vertical="1" data-kmenu-scroll="1" data-kmenu-dropdown-timeout="500">
+							<ul class="k-menu__nav ">
+								<li class="k-menu__item " aria-haspopup="true"><a target="" href="{% url 'dashboard:dashboard' %}" class="k-menu__link "><i class="k-menu__link-icon fa fa-briefcase"></i><span class="k-menu__link-text">Job Applications</span></a></li>
+								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover">
+                                    <a href="javascript:;" class="k-menu__link k-menu__toggle">
+                                        <i class="k-menu__link-icon fa fa-file-invoice"></i>
+                                        <span class="k-menu__link-text">Resume
+                                        </span>
+                                        <i class="k-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+									<div class="k-menu__submenu "><span class="k-menu__arrow"></span>
+										<ul class="k-menu__subnav">
+                                            <li class="k-menu__item " aria-haspopup="true">
+                                                {% if personal %}
+                                                <a href="{% url 'resume:personal-update' personal_id %}" class="k-menu__link ">
+                                                    <span class="k-menu__link-text">
+                                                        <i class="k-menu__link-icon-sm fa fa-user-lock fa-sm"></i>
+                                                        <span style="width:10px;"></span>Personal
+                                                    </span>
+                                                    <span class="kt-menu__link-badge">
+                                                        <span class="kt-badge kt-badge--brand" style="line-height:40px">✓</span>
+                                                    </span>
+                                                </a>
+                                                {% else %}
+                                                <a href="{% url 'resume:create-personal' %}" class="k-menu__link ">
+                                                    <span class="k-menu__link-text">
+                                                        <i class="k-menu__link-icon-sm fa fa-user-lock fa-sm"></i>
+                                                        <span style="width:10px;"></span>Personal
+                                                    </span>
+                                                </a>
+                                                <script>
+{#                                                  alertResume()#}
+                                                </script>
+                                                {% endif %}
+                                            </li>
+                                            <li class="k-menu__item " aria-haspopup="true">
+                                                <a href="{% url 'resume:experiences' %}" class="k-menu__link ">
+                                                    <span class="k-menu__link-text">
+                                                        <i class="k-menu__link-icon-sm fa fa-user-check fa-sm"></i>
+                                                        <span style="width:10px;"></span>Experience
+                                                    </span>
+                                                    {% if experience %}
+                                                        <span class="kt-menu__link-badge">
+                                                            <span class="kt-badge kt-badge--brand" style="line-height:40px">✓</span>
+                                                        </span>
+                                                    {% else %}
+                                                        <script>
+{#                                                            alertResume()#}
+                                                        </script>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+											<li class="k-menu__item " aria-haspopup="true">
+                                                <a href="{% url 'resume:educations' %}" class="k-menu__link ">
+                                                    <span class="k-menu__link-text">
+                                                        <i class="k-menu__link-icon-sm fa fa-user-graduate fa-sm" style="margin-right:4px;"></i>
+                                                        <span style="width:10px;"></span> Education
+                                                    </span>
+                                                    {% if education %}
+                                                        <span class="kt-menu__link-badge">
+                                                            <span class="kt-badge kt-badge--brand" style="line-height:40px">✓</span>
+                                                        </span>
+                                                    {% else %}
+                                                        <script>
+{#                                                            alertResume()#}
+                                                        </script>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+											<li class="k-menu__item " aria-haspopup="true">
+                                                <a href="{% url 'resume:references' %}" class="k-menu__link ">
+                                                    <span class="k-menu__link-text">
+                                                        <i class="k-menu__link-icon-sm fa fa-user-friends fa-sm"></i>
+                                                        <span style="width:10px;"></span>References
+                                                    </span>
+                                                    {% if reference %}
+                                                        <span class="kt-menu__link-badge">
+                                                            <span class="kt-badge kt-badge--brand" style="line-height:40px">✓</span>
+                                                        </span>
+                                                    {% else %}
+                                                        <script>
+{#                                                            alertResume()#}
+                                                        </script>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+										</ul>
+									</div>
+								</li>
+								<li class="k-menu__item  k-menu__item--submenu" aria-haspopup="true" data-kmenu-submenu-toggle="hover"><a href="javascript:;" class="k-menu__link k-menu__toggle"><i class="k-menu__link-icon fa fa-user"></i><span class="k-menu__link-text">My Profile</span><i class="k-menu__ver-arrow la la-angle-right"></i></a>
+									<div class="k-menu__submenu ">
+                                        <span class="k-menu__arrow"></span>
+                                            <ul class="k-menu__subnav">
+                                                <li class="k-menu__item " aria-haspopup="true"><a href="{% url 'users:update' %}" class="k-menu__link"><span class="k-menu__link-text"><i class="k-menu__link-icon-sm fa fa-info fa-sm"></i><span style="width:10px;"></span>My Info</span></a></li>
+                                                <li class="k-menu__item " aria-haspopup="true"><a href="{% url 'account_email' %}" class="k-menu__link"><span class="k-menu__link-text"><i class="k-menu__link-icon-sm fa fa-envelope fa-sm"></i><span style="width:10px;"></span>Email</span></a></li>
+                                                <li class="k-menu__item " aria-haspopup="true"><a href="{% url 'account_change_password' %}" class="k-menu__link"><span class="k-menu__link-text"><i class="k-menu__link-icon-sm fa fa-key fa-sm"></i><span style="width:10px;"></span>Password</span></a></li>
+                                            </ul>
+									</div>
+								</li>
+								<li class="k-menu__item " aria-haspopup="true"><a href="{% url 'account_logout' %}" class="k-menu__link "><i class="k-menu__link-icon fa fa-sign-out-alt"></i><span class="k-menu__link-text">Sign Out</span></a></li>
+							</ul>
+						</div>
+					</div>
+                    <div id="invite_friends">
+                        <a href="#">
+                            <div class="k-aside__footer" id="k_aside_footer">
+                                <div class="k-aside__footer-nav">
+                                    <span style="display:block;color:white;font-weight:bold;height:40px;line-height:40px;text-align:center;">Invite Friends</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+					<!-- end:: Aside Menu -->
+				</div>
+                    <div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper">
+                            {% block content %}
+                            {% endblock content %}
+                    </div>
+            </div>
+        </div>
+
+
+        {% block footer_scripts %}
+        <script>
+			var KAppOptions = {
+				"colors": {
+					"state": {
+						"brand": "#5d78ff",
+						"metal": "#c4c5d6",
+						"light": "#ffffff",
+						"accent": "#00c5dc",
+						"primary": "#5867dd",
+						"success": "#34bfa3",
+						"info": "#36a3f7",
+						"warning": "#ffb822",
+						"danger": "#fd3995",
+						"focus": "#9816f4"
+					},
+					"base": {
+						"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+						"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+					}
+				}
+			};
+		</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js" type="text/javascript"></script>
+
+        {% compress js %}
+            <script src="{% static 'js/chainedfk.js' %}" type="text/javascript"></script>
+            <script src="{% static 'smart-selects/admin/js/bindfields.js' %}" type="text/javascript"></script>
+            <script src="{% static 'js/dashboard.min.js' %}" type="text/javascript"></script>
+		{% endcompress %}
+
+		<!-- begin::Page Loader and set Sweet Alert -->
+		<script>
+			$(window).on('load', function() {
+				$('body').removeClass('k-page--loading');
+			});
+			swal.setDefaults({
+                width: 400,
+                heightAuto: false,
+                padding: '2.5rem',
+                buttonsStyling: false,
+                confirmButtonClass: 'btn btn-success',
+                confirmButtonColor: null,
+                cancelButtonClass: 'btn btn-secondary',
+                cancelButtonColor: null
+            });
+		</script>
+      {% endblock footer_scripts %}
+		<!-- end::Page Loader and Sweet Alert-->
+	</body>
+
+	<!-- end::Body -->
+</html>

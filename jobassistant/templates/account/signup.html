@@ -1,0 +1,122 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+<style>
+.hero-btn-sm {
+  background: #ff5f6d none repeat scroll 0 0;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 38px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.1);
+}
+</style>
+<form class="signup" id="signup_form" method="post" action="" style="padding:50px 10px 20px;">
+  <div class="modal-header">
+      <h3>Sign Up</h3>
+  </div>
+  <div class="modal-body">
+      <p>Already have an account? Then please <a href="{% url 'account_login' %}">log in</a>.</p>
+      <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
+          {% for error in form.non_field_errors %}
+            {{ error }}
+          {% endfor %}
+      </div>
+    <div id="div_id_email" class="form-group">
+        <label for="id_email" class="col-form-label  requiredField">
+            Email address<span class="asteriskField">*</span>
+        </label>
+        <div class=""> <input type="email" name="email" maxlength="254" class="emailinput form-control" required="" id="id_email">
+        </div>
+    </div>
+      <div id="div_id_username" class="form-group">
+          <label for="id_username" class="col-form-label  requiredField">
+                Username<span class="asteriskField">*</span>
+          </label> <div class=""> <input type="text" name="username" maxlength="150" autofocus="" class="textinput textInput form-control" required="" id="id_username">
+      </div>
+    </div>
+    <div id="div_id_password1" class="form-group">
+        <label for="id_password1" class="col-form-label  requiredField">
+                Password<span class="asteriskField">*</span>
+        </label>
+        <div class="">
+            <input type="password" name="password1" class="textinput textInput form-control" required="" id="id_password1">
+        </div>
+    </div>
+    <div id="div_id_password2" class="form-group">
+        <label for="id_password2" class="col-form-label  requiredField">
+                Password confirmation<span class="asteriskField">*</span>
+        </label>
+        <div class="">
+            <input type="password" name="password2" class="textinput textInput form-control" required="" id="id_password2">
+        </div>
+    </div>
+    </div>
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+  </div>
+  <div class="modal-footer">
+      <button id="submit-btn" class="hero-btn-sm" type="button" style="border:none;">Sign Up</button>
+  </div>
+</form>
+
+<script>
+    $(document).ready(function() {
+        $('#submit-btn').on('click', function(e) {
+            var form = $('.modal-content form');
+            var url = "{% url 'account_signup' %}";
+            var formIsValid = true;
+            console.log(url);
+            $.ajax({
+                type: 'POST',
+                url: url,
+                headers: {
+                    "X-CSRFToken": Cookies.get('csrftoken')
+                },
+                async: true,
+                data: form.serialize(),
+                success: function (data) {
+                    console.log(data);
+                    $.ajax({
+                        type: 'POST',
+                        url: 'https://' + window.location.host + '/users/register/',
+                        headers: {
+                            "X-CSRFToken": Cookies.get('csrftoken')
+                        },
+                        async: true,
+                        data: {
+                            username: $("#id_username").val(),
+                            password: $("#id_password1").val(),
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            if (window.location.href.indexOf("chat") > -1 ) {
+                                $('#nav-signup-btn').hide('slow');
+                            }
+                            user.username = $("#id_username").val();
+                            $('#modal').modal('toggle');
+                            alert('Signed up successfully!')
+                        },
+                        error: function (xhr, errmsg, err) {
+                            console.log(xhr.responseText);
+                            console.log(err);
+                            alert(errmsg);
+                        }
+                    });
+                    return formIsValid;
+                }
+            }).fail(function(data){
+                console.log(data);
+                alert('Please change your username or email. Username or email already exists');
+            });
+        })
+    });
+
+</script>

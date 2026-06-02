@@ -1,0 +1,53 @@
+{
+    "logs": {
+        "logs_collected": {
+            "files": {
+                "collect_list": [
+                    {
+                        "file_path": "/var/log/nginx/nginx_error.log",
+                        "log_group_name": "nginx_error_log",
+                        "log_stream_name": "nginx_error_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    },
+                    {
+                        "file_path": "/var/log/gunicorn/stdout_gunicorn.log",
+                        "log_group_name": "gunicorn_stout_log",
+                        "log_stream_name": "gunicorn_stout_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    },
+                    {
+                        "file_path": "/var/log/gunicorn/stderr_gunicorn.log",
+                        "log_group_name": "gunicorn_sterr_log",
+                        "log_stream_name": "gunicorn_sterr_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    },
+                    {
+                        "file_path": "/var/log/celery/stdout_celery-worker.log",
+                        "log_group_name": "celery_worker_stout_log",
+                        "log_stream_name": "celery_worker_stout_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    },
+                    {
+                        "file_path": "/var/log/celery/stderr_celery-worker.log",
+                        "log_group_name": "celery_worker_sterr_log",
+                        "log_stream_name": "celery_worker_sterr_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    },
+                    {
+                        "file_path": "/var/log/eb-activity.log",
+                        "log_group_name": "ebactivity_log",
+                        "log_stream_name": "ebactivity_stream",
+                        "timezone": "UTC",
+                        "timestamp_format": "%Y-%m-%dT%H:%M:%S"
+                    }
+                ]
+            }
+        },
+        "log_stream_name": "default"
+    }
+}

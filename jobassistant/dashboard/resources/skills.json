@@ -1,0 +1,117 @@
+{
+  "photoshop": {
+    "resource_1": {
+      "title": "Photoshop tutorials | Learn how to use Photoshop CC",
+      "link": "https://helpx.adobe.com/photoshop/tutorials.html"
+    },
+    "resource_2": {
+      "title": "Photoshop Tutorials - YouTube",
+      "link": "https://www.youtube.com/channel/UC6lrxMZggMaN1u2V9N2-zrQ"
+    },
+    "resource_3": {
+      "title": "95 top Photoshop tutorials | Creative Bloq",
+      "link": "https://www.creativebloq.com/graphic-design-tips/photoshop-tutorials-1232677"
+    },
+    "resource_4": {
+      "title": "450+ Free Photoshop Tutorials - Beginner to Advanced - PHLEARN",
+      "link": "https://phlearn.com/photoshop-tutorials/"
+    },
+    "resource_5": {
+      "title": "Free Photoshop Tutorials - Learn Adobe Photoshop",
+      "link": "https://www.photoshopessentials.com/"
+    }
+  },
+
+  "illustrator": {
+    "resource_1": {
+      "title": "Illustrator tutorials | Learn how to use Illustrator CC - Adobe Help Center",
+      "link": "https://helpx.adobe.com/illustrator/tutorials.html"
+    },
+    "resource_2": {
+      "title": "60 amazing Adobe Illustrator tutorials | Creative Bloq",
+      "link": "https://www.creativebloq.com/digital-art/illustrator-tutorials-1232697"
+    },
+    "resource_3": {
+      "title": "101 Awesome Adobe Illustrator Tutorials - Design tuts - Envato Tuts+",
+      "link": "https://design.tutsplus.com/tutorials/101-adobe-illustrator-tutorials--cms-29782"
+
+    },
+    "resource_4": {
+      "title": "The 30 Best Adobe Illustrator Tutorials for Graphic Designers - Colorlib",
+      "link": "https://colorlib.com/wp/adobe-illustrator-tutorials/"
+    },
+    "resource_5": {
+      "title": "Adobe Illustrator: Mastering the Fundamentals | Udemy",
+      "link": "https://www.udemy.com/adobe-illustrator-training/"
+    }
+  },
+
+    "maya": {
+    "resource_1": {
+      "title": "Maya Training and Tutorial Courses | Pluralsight - pluralsight.com‎",
+      "link": "https://www.pluralsight.com/browse/creative-professional/3d-vfx/maya?gclid=CjwKCAjwpIjZBRBsEiwA0TN1r8VL4Zo98GZqwJIm8PCB9HvDifN2CRz5vai3cIprDfLtlFH9SZ3B5xoCSKEQAvD_BwE&aid=701j0000001heIrAAI&promo=&oid=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=AU_Dynamic&utm_content=&s_kwcid=AL!5668!3!247651539317!b!!g!!&ef_id=Ws6HrwAAAa_phsFc:20180614121212:s"
+    },
+    "resource_2": {
+      "title": "12 mighty Maya tutorials to try today | Creative Bloq",
+      "link": "https://www.creativebloq.com/3d-tips/maya-tutorials-1232745"
+    },
+    "resource_3": {
+      "title": "Maya Tutorials | Maya | Autodesk Knowledge Network",
+      "link": "https://knowledge.autodesk.com/support/maya/learn-explore/.../maya-tutorials.html"
+    },
+    "resource_4": {
+      "title": "Maya - Online Courses, Classes, Training, Tutorials on Lynda",
+      "link": "https://www.lynda.com/Maya-training-tutorials/255-0.html"
+    },
+    "resource_5": {
+      "title": "100+ Maya 3D Tutorials For Beginners, Intermediate And Advanced",
+      "link": "https://www.hongkiat.com/.../100-maya-3d-tutorials-beginners-intermediate-advanced..."
+    }
+  },
+
+    "zBrush": {
+    "resource_1": {
+      "title": "ZClassroom - ZBrush Training from the Source - Pixologic",
+      "link": "https://pixologic.com/zclassroom/"
+    },
+    "resource_2": {
+      "title": "ZBrush - Online Courses, Classes, Training, Tutorials on Lynda",
+      "link": "https://www.lynda.com/ZBrush-training-tutorials/336-0.html"
+    },
+    "resource_3": {
+      "title": "Best ZBrush Tutorials & Video Courses For Teaching Yourself",
+      "link": "https://conceptartempire.com/best-zbrush-tutorials/"
+    },
+    "resource_4": {
+      "title": "TUTORIALS - ZBrush Guides",
+      "link": "http://www.zbrushguides.com/tutorials/"
+    },
+    "resource_5": {
+      "title": "zbrushtuts – Zbrush Tutorials, Art and Breakdowns",
+      "link": "http://zbrushtuts.com/"
+    }
+  },
+
+    "Unity": {
+    "resource_1": {
+      "title": "Unity Learn Tutorials",
+      "link": "https://unity3d.com/learn/tutorials"
+    },
+    "resource_2": {
+      "title": "Unity C# and Shader Tutorials - Catlike Coding",
+      "link": "https://catlikecoding.com/unity/tutorials/"
+    },
+    "resource_3": {
+      "title": "Unity | Ray Wenderlich",
+      "link": "https://www.raywenderlich.com/category/unity"
+    },
+    "resource_4": {
+      "title": "Unity Training and Tutorials | Lynda.com",
+      "link": "https://www.lynda.com/Unity-training-tutorials/1242-0.html"
+    },
+    "resource_5": {
+      "title": "Unity Tutorials: Database Interaction The Ultimate PHP & MySQL Course",
+      "link": "https://www.bitdegree.org/course/unity-tutorials"
+    }
+  }
+}

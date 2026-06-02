@@ -1,0 +1,39 @@
+<div id="contact" class="contact-area pt-130">
+    <div class="col-md-12 col-sm-12">
+        <div class="section-heading pb-55 text-center">
+            <h2>Contact Us</h2>
+            <p>Connect with us and say “Hi!” by joining our slack channel</p>
+            <a class = "hero-btn"  style="margin-top:20px; font-size: 12px;" href="https://join.slack.com/t/jobassistant/shared_invite/enQtODQzNTYzODM1ODYzLTZjMjFmNWFmZDExZWZkZWEzZDUyNmQ2YWM2MDE3YTBiMTY4ZmVlZGQ0N2JkZTMyYjc3MzM5MDZiNjhhMTM5OTI">
+                Join Slack Community
+        </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Contact Form -->
+                <div class="contact-form" style="width:100%">
+                    <form class="form" name="contact" method="post" action={% url 'email' %}>
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <input type="text" name="name" class="form-control" id="first-name" placeholder="Name" required="required">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
+                            </div>
+                            <div class="form-group description col-md-12 mbnone">
+                                <textarea rows="3" name="message" class="form-control" id="description" placeholder="Message" required="required"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-actions actions text-center">
+                                    <input type="submit" value="SUBMIT" name="submit" class="btn btn-lg btn-contact-bg" title="Submit Your Message!">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

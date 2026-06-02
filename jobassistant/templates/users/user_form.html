@@ -1,0 +1,118 @@
+{% extends "dashboard/dashboard_menu.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block content %}
+    <style>
+    .select2-selection {
+        height: 42px !important;
+    }
+    .select2-selection__arrow {
+        height: 42px !important;
+    }
+    .select2-container {
+        width: 100% !important;
+    }
+    .form-check{
+        display: none;
+    }
+    .btn-info {
+        background-color: #FA5765;
+    }
+    @media(max-width:400px){
+        .select2-container {
+            min-width: 10em !important;
+        }
+    }
+    @media (min-width: 1025px) {
+        .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: content;
+            -ms-flex-pack: content;
+            justify-content: content;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0 0.75rem;
+        }
+        .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-link {
+            padding: 0 0.2rem 0 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #b2afc6;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        .k-header__title .k-header__title-breadcrumbs {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+        }
+        .k-header__title .k-header__title-title {
+            padding: 0 1.25rem 0 0;
+        }
+        .k-header__title {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 0 2.2rem;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home > i {
+            font-size: 1.15rem;
+            color: #b2afc6;
+        }
+        .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home {
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator:after {
+          display: block;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          content: " ";
+          background: #b2afc6;
+        }
+    }
+    </style>
+    <div class="k-content k-grid__item k-grid__item--fluid k-grid k-grid--hor">
+        <div id="k_header" class="k-header k-grid__item " data-kheader-minimize="on">
+            <!-- begin:: Content Head -->
+            <div class="k-header__title">
+                <h3 class="k-header__title-title">JobAssistant</h3>
+                <div class="k-header__title-breadcrumbs">
+                    <a href="#" class="k-header__title-breadcrumb-home"><i class="flaticon-home-2"></i></a>
+                    <span class="k-header__title-breadcrumb-separator"></span>
+                    <a href="" class="k-header__title-breadcrumb-link">My Profile</a>
+                    <span class="k-header__title-breadcrumb-separator"></span>
+                    <a href="" class="k-header__title-breadcrumb-link">My Info</a>
+                </div>
+            </div>
+        </div>
+    <div class="card pb-3 mb-5">
+      <h1>{{ user.username }}</h1>
+      <form class="form-horizontal" method="post" action="{% url 'users:update' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn btn-info fillHeight flex-btn-margin right-btn">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+{% endblock %}

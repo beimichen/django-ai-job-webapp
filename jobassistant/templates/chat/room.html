@@ -1,0 +1,247 @@
+{#{% if user.is_authenticated %}#}
+{#    {% extends "dashboard/dashboard_menu.html" %}#}
+{#{% else %}#}
+{% extends 'base3.html' %}
+{#{% endif %}#}
+{% load static i18n compress%}
+{% block content %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.min.css" type="text/css" media="all" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <style>
+        html, body {
+            font-size: 16px;
+            background-color: #fbfbfb;
+        }
+        .tag-wrapper{
+            width: calc(100% - 33px);
+            margin: 10px auto 15px;å
+            padding: 0 !important;
+            position: relative;
+            box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.4);
+            background: white;
+            display: none;
+        }
+        .left {
+            overflow: visible;
+            overflow-wrap: break-word;
+            resize: none;
+            height: 32px;
+            border: none;
+            padding: 7px 10px;
+            outline: none;
+            font-size: 0.905rem;
+            float: left;
+            width: calc(100% - 70px);
+            line-height: 1.3em;
+            min-height: 1.7em;
+            max-height: 10rem;
+            display: block;
+            max-width: 88%;
+            margin-right: 2.5%;
+        }
+        .right {
+            float: left;
+            display:block;
+            width:calc(15%);
+        }
+        .selectize-input{
+            border: none !important;
+        }
+        .tag-submit {
+            padding: 3px;
+            border: none;
+            float: left;
+            margin: 5px;
+            color: #646c9a;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            width: 36px;
+            height: 35px;
+            margin-top: 4px;
+            background: #fff;
+            outline: none !important;
+        }
+        .vertical-align {
+            position: absolute !important;
+        }
+        @media(max-width:1400px){
+            .vertical-align {
+                left:20%;
+            }
+        }
+        @media(min-width:1401px){
+            .vertical-align {
+                left:12%;
+            }
+        }
+        @media(max-width:760px){
+            div.conv-form-wrapper:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                display: block;
+                height: 30px;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background: none;
+            }
+        }
+        .submit {
+            color: #646c9a !important;
+        }
+    </style>
+        <section id="jobassistant-chat">
+            <div class="vertical-align">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 col-xs-offset-0">
+                            <div class="card no-border">
+                                <div id="chat" class="conv-form-wrapper">
+                                    <form action="" method="" class="chatForm" id="jobassistantChatForm" name="chatForm">
+                                        <input type="text" id="userTextInput" name="user-input" data-conv-question="Hi! I'm JobAssistant, your friendly AI assistant. I'm here to help land you a job! To begin, please copy and paste the entire job ad including the position title and everyting under it. If you don't have a full job ad, just type the title of the position.">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tag-wrapper">
+                                <input type="text" name="tags" class="left" required="" id="id_tags" tabindex="-1" value="" style="display: none;">
+                                <button type="submit" class="tag-submit right">▶</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% block footer %}
+<script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                var card = $(".card");
+                if ($(window).width() < 600) {
+                   $("input[id=id_tags]").selectize({
+                        valueField: 'name',
+                        labelField: 'name',
+                        searchField: 'name',
+                        diacritics: true,
+                        create: true,
+                        persist: true,
+                        openOnFocus: true,
+                        hideSelected: true,
+                        closeAfterSelect: true,
+                        loadThrottle: 300,
+                        preload: false,
+                        addPrecedence: false,
+                        selectOnTab: false,
+                        dropdownDirection: 'up',
+                        dropdownParent: card,
+                        delimiter: ',',
+                        plugins: [],
+                        render: {
+                            option: function(item, escape) {
+                                return '<div>' +
+                                    '<span class="title">' +
+                                        '<span class="name">' + escape(item.name) + '</span>' +
+                                    '</span>' +
+                                '</div>';
+                            },
+                            'item': function(item, escape) {
+                                name = item.name.replace(/^\s*"|"\s*$/g, '');
+                                return '<div class="item">' + escape(name) + '</div>';
+                            }
+                        },
+                        load: function(query, callback) {
+                            if (query.length < 2) return callback();
+                            $.ajax({
+                                url: '/taggit/?query=' + encodeURIComponent(query),
+                                type: 'GET',
+                                error: function() {
+                                    callback();
+                                },
+                                success: function(res) {
+                                    callback(res.tags.slice(0, 10));
+                                }
+                            });
+                        }
+                    }).parents('.chatForm').css('overflow', 'visible');
+                } else {
+                    $("input[id=id_tags]").selectize({
+                        valueField: 'name',
+                        labelField: 'name',
+                        searchField: 'name',
+                        diacritics: true,
+                        create: true,
+                        persist: true,
+                        openOnFocus: true,
+                        hideSelected: true,
+                        closeAfterSelect: true,
+                        loadThrottle: 300,
+                        preload: false,
+                        addPrecedence: false,
+                        selectOnTab: false,
+    {#                    dropdownDirection: 'up',#}
+                        delimiter: ',',
+                        plugins: [],
+                        render: {
+                            option: function(item, escape) {
+                                return '<div>' +
+                                    '<span class="title">' +
+                                        '<span class="name">' + escape(item.name) + '</span>' +
+                                    '</span>' +
+                                '</div>';
+                            },
+                            'item': function(item, escape) {
+                                name = item.name.replace(/^\s*"|"\s*$/g, '');
+                                return '<div class="item">' + escape(name) + '</div>';
+                            }
+                        },
+                        load: function(query, callback) {
+                            if (query.length < 2) return callback();
+                            $.ajax({
+                                url: '/taggit/?query=' + encodeURIComponent(query),
+                                type: 'GET',
+                                error: function() {
+                                    callback();
+                                },
+                                success: function(res) {
+                                    callback(res.tags.slice(0, 10));
+                                }
+                            });
+                        }
+                    }).parents('.chatForm').css('overflow', 'visible');
+                }
+            });
+        })(jQuery || django.jQuery);
+    </script>
+<script>
+    var senderUUID = {{ sender_uuid }};
+    //TODO: create ajax post to continue bot conversation after user signs up- business logic should stay in view
+    window.onbeforeunload = function(){
+        var message = 'Are you sure you want to reload? You will lose this chat session';
+        if (typeof evt == 'undefined') {
+            evt = window.event;
+        }
+        if (evt) {
+            evt.returnValue = message;
+        }
+        return message;
+    }
+</script>
+<script>
+    swal.setDefaults({
+        width: 400,
+        heightAuto: false,
+        padding: '2.5rem',
+        buttonsStyling: false,
+        confirmButtonClass: 'btn btn-success',
+        confirmButtonColor: null,
+        cancelButtonClass: 'btn btn-secondary',
+        cancelButtonColor: null
+    });
+</script>
+{% endblock %}
+{% endblock content %}
+{# TODO: put chat.js in this page #}
+

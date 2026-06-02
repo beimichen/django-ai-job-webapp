@@ -1,0 +1,323 @@
+{% extends "dashboard/dashboard_menu.html" %}
+{% load static i18n compress %}
+{#{% load compress static %}#}
+{% load crispy_forms_tags %}
+{% load formset_tags %}
+{% block title %}
+    {{ user.username }}
+{% endblock %}
+{% block content %}
+{#    {% compress css %}#}
+{#        <link href="{% static 'admin/css/vendor/select2/select2.css' %}" type="text/css" media="screen"#}
+{#              rel="stylesheet">#}
+{#        <link href="{% static 'admin/css/autocomplete.css' %}" type="text/css" media="screen" rel="stylesheet">#}
+{#        <link href="{% static 'autocomplete_light/select2.css' %}" type="text/css" media="screen" rel="stylesheet">#}
+{#    {% endcompress %}#}
+    <style>
+        .select2-selection {
+            height: 42px !important;
+        }
+
+        .select2-selection__arrow {
+            height: 42px !important;
+        }
+
+        .select2-container {
+            width: 100% !important;
+        }
+
+        .form-check {
+            display: none;
+        }
+
+        @media (max-width: 400px) {
+            .select2-container {
+                min-width: 10em !important;
+            }
+            .stepper.stepper-horizontal {
+                display:none;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: content;
+                -ms-flex-pack: content;
+                justify-content: content;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 0 0.75rem;
+            }
+
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-link {
+                padding: 0 0.2rem 0 0;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #b2afc6;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+            .k-header__title .k-header__title-breadcrumbs {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                list-style-type: none;
+                margin: 0;
+            }
+
+            .k-header__title .k-header__title-title {
+                padding: 0 1.25rem 0 0;
+            }
+
+            .k-header__title {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin: 0 2.2rem;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home > i {
+                font-size: 1.15rem;
+                color: #b2afc6;
+            }
+
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-home {
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+            .k-header__title .k-header__title-breadcrumbs .k-header__title-breadcrumb-separator:after {
+                display: block;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                content: " ";
+                background: #b2afc6;
+            }
+        }
+    </style>
+    {% compress css %}
+        <link href="{% static 'css/stepper.min.css' %}" type="text/css" media="all"
+              rel="stylesheet">
+    {% endcompress %}
+    <div class="k-content k-grid__item k-grid__item--fluid k-grid k-grid--hor">
+        <div id="k_header" class="k-header k-grid__item " data-kheader-minimize="on">
+            <!-- begin:: Content Head -->
+            <div class="k-header__title">
+                <h3 class="k-header__title-title">JobAssistant</h3>
+                <div class="k-header__title-breadcrumbs">
+                    <a href="#" class="k-header__title-breadcrumb-home"><i class="flaticon-home-2"></i></a>
+                    <span class="k-header__title-breadcrumb-separator"></span>
+                    <a href="" class="k-header__title-breadcrumb-link">Resume</a>
+                    <span class="k-header__title-breadcrumb-separator"></span>
+                    <a href="" class="k-header__title-breadcrumb-link">References</a>
+                </div>
+            </div>
+        </div>
+        <!-- Horizontal Steppers -->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Steppers Wrapper -->
+        <ul class="stepper stepper-horizontal">
+            {% if personal %}
+              <li>
+                <a href="{% url 'resume:personal-update' personal_id %}">
+                  <span class="circle">✔</span>
+                  <span class="label">Personal</span>
+                </a>
+              </li>
+          {% else %}
+          <li>
+            <a href="{% url 'resume:create-personal' %}">
+              <span class="circle">?</span>
+              <span class="label">Personal</span>
+            </a>
+          </li>
+        {% endif %}
+            {% if experience %}
+              <li>
+                <a href="{% url 'resume:experiences' %}">
+                  <span class="circle">✔</span>
+                  <span class="label">Experience</span>
+                </a>
+              </li>
+          {% else %}
+           <li>
+            <a href="{% url 'resume:experiences' %}">
+              <span class="circle">?</span>
+              <span class="label">Experience</span>
+            </a>
+          </li>
+        {% endif %}
+          {% if education %}
+              <li>
+                <a href="{% url 'resume:educations' %}">
+                  <span class="circle">✔</span>
+                  <span class="label">Education</span>
+                </a>
+              </li>
+          {% else %}
+          <li>
+            <a href="{% url 'resume:educations' %}">
+              <span class="circle">?</span>
+              <span class="label">Education</span>
+            </a>
+          </li>
+        {% endif %}
+          {% if reference %}
+            <li class="active">
+            <a href="{% url 'resume:references' %}">
+              <span class="circle">✔</span>
+              <span class="label">References</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="active">
+            <a href="{% url 'resume:references' %}">
+              <span class="circle">?</span>
+              <span class="label">References</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <!-- /.Steppers Wrapper -->
+        <form class="form-horizontal m-5" id="formset" method="post" action="{% url 'resume:references' %}"
+              data-formset-prefix="{{ formset.prefix }}">
+            {% csrf_token %}
+            {% compress css %}
+                {{ formset.media.css }}
+            {% endcompress %}
+            {% compress js %}
+                {{ formset.media.js }}
+            {% endcompress %}
+            {{ formset.management_form }}
+            <div data-formset-body>
+                {% for form in formset %}
+                    <div class="card pb-3 mb-5" data-formset-form>
+                        {% compress css %}
+                            {{ formset.form.media.css }}
+                        {% endcompress %}
+                        {% compress js %}
+                            {{ formset.form.media.js }}
+                        {% endcompress %}
+                            {{ form | crispy }}
+                            {{ form.field.errors }}
+                        <div>
+                            <a href="#" style="color:red;"
+                                    data-formset-delete-button>Delete Reference
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div>
+                <script type="form-template" data-formset-empty-form>
+                    {% escapescript %}
+                        <div data-formset-body>
+                            {% compress css %}
+                                {{ formset.form.media.css | safe}}
+                            {% endcompress %}
+                            {% compress js %}
+                                {{ formset.form.media.js | safe}}
+                            {% endcompress %}
+                            <div class="card pb-3 mb-5" id="added-form" data-formset-form>
+                                {{ formset.empty_form | crispy }}
+                                <div>
+                                    <a href="#" style="color:red;"
+                                            data-formset-delete-button>Delete Position
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endescapescript %}
+                </script>
+                <div class="row">
+                    <div class="col text-center">
+{#                        <button type="button" id="add-reference"#}
+{#                                class="btn btn-info fillHeight flex-btn-margin right-btn" style="margin-right:15px"#}
+{#                                data-formset-add>Add Reference#}
+{#                        </button>#}
+                        <button type="button" id="add-reference"
+                                class="hero-btn-sm fillHeight flex-btn-margin right-btn" style="margin-right:15px"
+                                data-formset-add>Add Reference
+                        </button>
+{#                        <button type="submit" class="btn btn-info fillHeight flex-btn-margin right-btn"#}
+{#                                id="submit-resume">Save and Continue#}
+{#                        </button>#}
+                        <button type="submit" class="hero-btn-sm fillHeight flex-btn-margin right-btn"
+                                id="submit-resume">Save and Continue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% block footer %}
+        {% block extra_js %}
+            <script>
+                jQuery(document).ready(function ($) {
+                    $("#formset").formset({
+                        animateForms: true,
+                        reorderMode: 'dom',
+                    });
+
+                    {#        $('#add-position').on('click', function(){#}
+                    {#            $('*[id*=DELETE]').each(function() {#}
+                    {#                $(this).hide();#}
+                    {#            });#}
+                    {#        });#}
+
+                    $('#add-reference').on('click', function () {
+                        let n = $('.card').length;
+                        $('#id_form-MIN_NUM_FORMS').attr('value', n);
+                    });
+
+                    $('#btn-id_form-0-id').prop('aria-expanded', 'true');
+                    $('#collapseid_form-0-id').prop('class', 'collapse show');
+
+                    var btn_headings_without_val = $('button:contains(Position in None)');
+                    var btn_headings_without_val2 = $('button:contains(\n' +
+                        '                      Position in \n' +
+                        '                    )');
+                    if (btn_headings_without_val) {
+                        $(btn_headings_without_val).closest('div').next().prop('class', 'collapse show');
+                        $(btn_headings_without_val).prop('class', 'btn btn-link collapse show')
+                    }
+
+                    $(btn_headings_without_val).html('Add a position');
+                    $(btn_headings_without_val2).html('Add a position');
+
+                    if (btn_headings_without_val) {
+                        $(btn_headings_without_val2).closest('div').next().prop('class', 'collapse show');
+                        $(btn_headings_without_val2).prop('class', 'btn btn-link collapse show')
+                    }
+
+                    var btn_headings_with_val = $('button:contains(Position in {{ form.location.value}})');
+                    if (btn_headings_with_val) {
+                        (btn_headings_with_val).closest('div').next().prop('class', 'collapse');
+                    }
+
+                    {#        $('*[id*=DELETE]').each(function() {#}
+                    {#            $(this).hide();#}
+                    {#        });#}
+                });
+            </script>
+        {% endblock extra_js %}
+    {% endblock %}
+{% endblock %}
+
+
+

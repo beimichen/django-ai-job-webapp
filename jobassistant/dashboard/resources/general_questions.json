@@ -1,0 +1,119 @@
+{
+  "general_questions": [
+    {
+      "id": 1,
+      "content": [
+        {
+          "slug": "What do you think are your stand-out qualities as a {}",
+          "fillers": [
+            "position"
+          ]
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "Beyond my talents as a {}, I can also provide immense value to {} in the following ways: ",
+          "fillers": [
+            "position",
+            "company"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": [
+        {
+          "slug": "What makes working at {} a great fit for you?",
+          "fillers": [
+            "company"
+          ]
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "Working at {} is a great fit for me because... ",
+          "fillers": [
+            "company"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": [
+        {
+          "slug": "What unique skills and qualities could you bring to the team at {}?",
+          "fillers": [
+            "company"
+          ]
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "As well as being an experienced {}, I can bring unique skills and qualities to the team at {} such as ",
+          "fillers": [
+            "position",
+            "company"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": [
+        {
+          "slug": "How would working at {} grow you as a professional?",
+          "fillers": [
+            "company"
+          ]
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "As a {} I am always looking to further develop my skills to the next level. Working at {} will help me develop my skills by ",
+          "fillers": [
+            "position",
+            "company"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "content": [
+        {
+          "slug": "Describe in detail, the unique ways in which you can provide value as a {} at {}.",
+          "fillers": [
+            "position",
+            "company"
+          ]
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "Beyond my talents as a {}, I can also provide immense value to {} in the following ways: ",
+          "fillers": [
+            "position",
+            "company"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "content": [
+        {
+          "slug": "Briefly describe an event or period at a relevant previous position where you performed your duties outstandingly, and describe your role.",
+          "fillers": []
+        }
+      ],
+      "lead_ins": [
+        {
+          "lead_slug": "An great example of my abilities is when I worked at ",
+          "fillers": []
+        }
+      ]
+    }
+  ]
+}
