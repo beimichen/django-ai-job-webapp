@@ -47,7 +47,7 @@ celery -A jobassistant.taskapp worker -l info
 ## Configuration
 
 Settings live in `config/settings/` (`base.py`, `local.py`, `production.py`,
-`staging.py`). All secrets are read from the environment — see `.env.example`,
+`staging.py`). All secrets are read from the environment - see `.env.example`,
 `SECRET_KEY` (`DJANGO_SECRET_KEY`), database (`DB_PASSWORD`, RDS host vars), S3
 buckets, and the Rasa core URL. Never commit real credentials.
 
@@ -57,4 +57,4 @@ buckets, and the Rasa core URL. Never commit real credentials.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
