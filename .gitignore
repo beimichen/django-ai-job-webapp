@@ -67,8 +67,8 @@ celerybeat-schedule
 
 # Environments
 .venv
-jobxai_venv/
-jobxai_py3.6_venv
+jobai_venv/
+jobai_py3.6_venv
 venv/
 ENV/
 
@@ -164,7 +164,7 @@ typings/
 # Provided default Pycharm Run/Debug Configurations should be tracked by git
 # In case of local modifications made by Pycharm, use update-index command
 # for each changed file, like this:
-# git update-index --assume-unchanged .idea/jobxai.iml
+# git update-index --assume-unchanged .idea/jobai.iml
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -338,7 +338,7 @@ pip-selfcheck.json
 ### Project template
 
 MailHog
-jobxai/media/
+jobai/media/
 
 .pytest_cache/
 
